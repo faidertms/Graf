@@ -2,15 +2,17 @@
 public class Lista<T> {
 	private No<T> inicial = null;
 	private int nelementos = 0;
-	public void inserir(No<T> p){
+	public void inserir(T p){
+		No<T> temp = new No<T>();
+		temp.setnumero(p);
 		if(inicial == null){
-			inicial = p;
+			inicial = temp;
 			nelementos++;
 		}else{
 			No<T> aux = inicial;
 			while(aux != null){
 				if(aux.getproximo() == null){
-					aux.setproximo(p);
+					aux.setproximo(temp);
 					nelementos++;
 					break;
 				}else{
