@@ -1,10 +1,12 @@
 
 public class Lista<T> {
+	
 	private No<T> inicial = null;
 	private int nelementos = 0;
+	
 	public void inserir(T p){
-		No<T> temp = new No<T>();
-		temp.setnumero(p);
+		No<T> temp = new No<T>(p);
+		
 		if(inicial == null){
 			inicial = temp;
 			nelementos++;
@@ -21,6 +23,7 @@ public class Lista<T> {
 			}
 		}
 	}
+	
 	public void imprimirLista(){
 		No<T> aux = inicial;
 		while(aux!=null){
@@ -47,6 +50,7 @@ public class Lista<T> {
 	public void imprimirNelementos(){
 		System.out.println(nelementos);
 	}
+	
 	public No<T> obterNo(T p){
 		No<T> aux = inicial;
 		while(aux!=null){
@@ -64,6 +68,7 @@ public class Lista<T> {
 		}
 		return aux;
 	}
+	
 	public void remover(T p){
 		No<T> aux = inicial;
 		No<T> aux2 = null;
@@ -85,9 +90,9 @@ public class Lista<T> {
 					}else{
 						aux2 = aux;
 						aux = aux.getproximo();
+					}
 			}
 		}
-	}
 	}
 
 }

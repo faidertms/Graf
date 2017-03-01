@@ -4,9 +4,9 @@ public class Inicio {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Lista<No> l = new Lista<No>();
-		No<Integer> t = new No<Integer>();
-		No<Integer> t2 = new No<Integer>();
-		No<Integer> t3 = new No<Integer>();
+		No<Integer> t = new No<Integer>(1);
+		No<Integer> t2 = new No<Integer>(2);
+		No<Integer> t3 = new No<Integer>(3);
 		l.inserir(t);
 		l.inserir(t2);
 		l.inserir(t3);
