@@ -3,13 +3,15 @@ public class Inicio {
 
 	public static void main(String[] args) {
 		
-		/*ListaAdj graf = new ListaAdj();
+		ListaAdj graf = new ListaAdj();
 		graf.inserirVertice("Thiago");
 		graf.inserirVertice("Sales");
-		graf.imprimirArestas();*/
+		graf.inserirAresta("Thiago","Sales");
+		graf.removerAresta("hiago","Sales");
+		//graf.imprimirGrafo();
 		
 		// Teste
-		Lista<No> l = new Lista<No>();
+		/*Lista<No> l = new Lista<No>();
 		No<Integer> t = new No<Integer>(1);
 		No<Integer> t2 = new No<Integer>(2);
 		No<Integer> t3 = new No<Integer>(3);
@@ -22,14 +24,15 @@ public class Inicio {
 		
 		l.imprimirLista();
 		l.imprimirNelementos();
-		System.out.println("Separa");
-		System.out.println(t5.equals(t3));
-		System.out.println("Separa");
-		l.remover(t);
-		l.remover(t5);
+		System.out.println("Separa");l.remover(t);
+		System.out.println(l.obter(t)); // fazer umas modificação no obter no
+		System.out.println("Separa-T");
 		
-		l.encontrarElemento(t3);
-		l.imprimirLista();
+		l.remover(t5);
+		l.remover(t2);
+		
+		System.out.println(l.encontrarElemento(t2));
+		l.imprimirLista();*/
 	}
 
 }

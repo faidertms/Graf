@@ -32,42 +32,43 @@ public class Lista<T> {
 		}
 	}
 
-	public void encontrarElemento(T p) {
+	public boolean encontrarElemento(T p) {
 		No<T> aux = inicial;
 		while (aux != null) {
-			if (aux.getnumero() == p) {
+			if (aux.getnumero().equals(p)) {
 				System.out.println("Elemento Encontrado");
-				break;
-			}
-			if (aux.getproximo() == null) {
-				System.out.println("Elemento Não Encontrado");
-				break;
+				return true;
 			}
 			aux = aux.getproximo();
 		}
+		System.out.println("Elemento Não Encontrado");
+		return false;
 	}
 
-	public int imprimirNelementos() {
+	public void imprimirNelementos() {
 		System.out.println(nelementos);
+	}
+
+	public int getNelementos() {
 		return nelementos;
 	}
 
-	public No<T> obterNo(T p) {
+	public T obter(T p) {
 		No<T> aux = inicial;
 		while (aux != null) {
-			if (aux.getnumero() == p) {
+			if (aux.getnumero().equals(p)) {
 				break;
 			} else if (aux.getproximo() == null) {
 				System.out.println("Elemento não existe");
-				aux = null; // faz o tratamento no programa
-				break;
+				//aux = null; // faz o tratamento no programa
+				return null;
 
 			} else {
 				aux = aux.getproximo();
 			}
 
 		}
-		return aux;
+		return aux.getnumero();
 	}
 
 	public void remover(T p) {
@@ -93,6 +94,21 @@ public class Lista<T> {
 					aux = aux.getproximo();
 				}
 			}
+		}
+	}
+
+	public T obterPosição(int n) {
+		No<T> aux = inicial;
+		int contador = 1;
+		if (n <= nelementos) {
+			while (contador < n) {
+				aux = aux.getproximo();
+				contador++;
+			}
+			return aux.getnumero();
+		} else {
+			System.out.println("Posição inexistente");
+			return null;
 		}
 	}
 
