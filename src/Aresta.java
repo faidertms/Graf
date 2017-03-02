@@ -3,10 +3,10 @@ public class Aresta {
 	private Vertice origem;
 	private Vertice destino;
 
-    Aresta(Vertice origem, Vertice destino) {
-    	this.origem = origem;
-        this.destino = destino;
-    }
+	Aresta(Vertice origem, Vertice destino) {
+		this.origem = origem;
+		this.destino = destino;
+	}
 
 	public Vertice getOrigem() {
 		return origem;
@@ -22,5 +22,12 @@ public class Aresta {
 
 	public void setDestino(Vertice destino) {
 		this.destino = destino;
+	}
+	
+	public boolean equals(Object obj) {
+		if (obj instanceof No) {
+			return ((origem == ((Aresta) obj).origem) && (destino == ((Aresta) obj).destino));
+		}
+		return false;
 	}
 }

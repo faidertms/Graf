@@ -1,16 +1,16 @@
 
 public class Vertice {
 	private String nome;
-    private Lista<Aresta> adj;
+	private Lista<Aresta> adj;
 
-    Vertice(String nome) {
-        this.nome = nome;
-        this.adj = new Lista<Aresta>();
-    }
+	Vertice(String nome) {
+		this.nome = nome;
+		this.adj = new Lista<Aresta>();
+	}
 
-    void inserirAresta(Aresta p) {
-        adj.inserir(p);
-    }
+	public void inserirAresta(Aresta p) {
+		adj.inserir(p);
+	}
 
 	public String getNome() {
 		return nome;
@@ -26,5 +26,19 @@ public class Vertice {
 
 	public void setAdj(Lista<Aresta> adj) {
 		this.adj = adj;
+	}
+
+	public void removerAresta(Aresta p) {
+		this.adj.remover(p);
+	}
+
+	public void imprimirArestas() {
+	}
+
+	public boolean equals(Object obj) {
+		if (obj instanceof No) {
+			return nome == ((Vertice) obj).nome;
+		}
+		return false;
 	}
 }
