@@ -1,7 +1,7 @@
 
 public class Vertice {
 	private String nome;
-	Lista<Aresta> adj;
+	private Lista<Aresta> adj;
 
 	Vertice(String nome) {
 		this.nome = nome;
@@ -31,9 +31,14 @@ public class Vertice {
 	public void removerAresta(Aresta p) {
 		this.adj.remover(p);
 	}
+
 	// remover aresta recebe aresta
 	public void imprimirArestas() {
-		System.out.println(nome + " --> ");
+		String aux = nome + " --> ";
+		for (int z = 1; z <= adj.getNelementos(); z++) {
+			aux = aux + adj.obterPosição(z).getDestino().getNome() + " , ";
+		}
+		System.out.println(aux);
 	}
 
 	public boolean equals(Object obj) {

@@ -6,9 +6,12 @@ public class Inicio {
 		ListaAdj graf = new ListaAdj();
 		graf.inserirVertice("Thiago");
 		graf.inserirVertice("Sales");
+		graf.inserirVertice("Cotoco");
+		graf.inserirAresta("Sales", "Cotoco");
 		graf.inserirAresta("Thiago","Sales");
-		graf.removerAresta("hiago","Sales");
-		//graf.imprimirGrafo();
+		graf.inserirAresta("Thiago","Cotoco");
+		//graf.removerAresta("hiago","Sales");
+		graf.imprimirGrafo();
 		
 		// Teste
 		/*Lista<No> l = new Lista<No>();
