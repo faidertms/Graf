@@ -3,15 +3,24 @@ public class Inicio {
 
 	public static void main(String[] args) {
 		
-		ListaAdj graf = new ListaAdj();
+		
+		MatrizAdj graf = new MatrizAdj(3);
+		graf.insereAresta(0, 1, 1);
+		graf.insereAresta(1, 2, 3);
+		graf.insereAresta(2, 1, 0);
+		graf.imprimirGrafo();
+		
+		
+		/*ListaAdj graf = new ListaAdj();
 		graf.inserirVertice("Thiago");
 		graf.inserirVertice("Sales");
-		graf.inserirVertice("Cotoco");
-		graf.inserirAresta("Sales", "Cotoco");
+		graf.inserirVertice("Tairone");
+		graf.inserirAresta("Sales", "Tairone");
 		graf.inserirAresta("Thiago","Sales");
-		graf.inserirAresta("Thiago","Cotoco");
-		//graf.removerAresta("hiago","Sales");
-		graf.imprimirGrafo();
+		graf.inserirAresta("Thiago","Tairone");
+		graf.inserirAresta("Tairone","Sales");
+		//graf.removerAresta("Thiago","Sales");
+		graf.imprimirGrafo();*/
 		
 		// Teste
 		/*Lista<No> l = new Lista<No>();
